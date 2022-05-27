@@ -7,6 +7,10 @@
     <title>Box Model</title>
 
     <style>
+        .container{
+            width: 1215px;
+            margin: 0 auto;
+        }
         .box1{
             width: 300px;
             height: 200px;
@@ -46,16 +50,109 @@
             
             float: left;
 
+            margin-left: 15px;
+            border: 3px solid green;
+            box-sizing: border-box;
+
+        }
+        .box3{
+            width: 300px;
+            height: 200px;
+            background-color: red;
+
+            float: left;
+        }
+
+        .box4{
+            width: 300px;
+            height: 200px;
+            background-color: black;
+            float: left;
+            margin-bottom: 15px;
+        }
+        .box5{
+            width: 100%;
+            background-color: gray;
+            height: 200px;
+            clear: both;
+            /* A propriedade clear do CSS especifica se um elemento pode ter elementos flutuantes ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes.  */
+            margin-bottom: 15px;
+        }
+        
+        .box{
+            width: 31.33%;
+            height: 200px;
+            float: left;
+            background-color: blueviolet;
+            margin: 0 1% 15px;
+        }
+        .box6{
+            width: 70%;
+            background-color: gray;
+            float: left;
+        }
+        .box8{
+            width: 29%;
+            margin-left: 1%;
+            float: right;
+            height: 400px;
+            background-color: cornflowerblue;
+        }
+        .box7{
+            width: 48%;
+            height: 150px;
+            margin: 0 1% 15px;
+            background-color: chartreuse;
+            float: left;
+
+
         }
     </style>
 
 </head>
 <body>
-    
-    <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima dolore cumque esse! Voluptatum cum ratione tempore recusandae, magni quisquam aliquid cupiditate provident nisi eligendi quo incidunt autem, aut beatae.</div>
+    <div class="container">
 
-    <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odit officia, eligendi facere explicabo hic iure. Praesentium at exercitationem sit doloribus numquam esse repellat, in alias fugiat quia fugit rerum.</div>
+        <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima dolore cumque esse! Voluptatum cum ratione tempore recusandae, magni quisquam aliquid cupiditate provident nisi eligendi quo incidunt autem, aut beatae.</div>
 
+        <div class="box2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odit officia, eligendi facere explicabo hic iure. Praesentium at exercitationem sit doloribus numquam esse repellat, in alias fugiat quia fugit rerum.
+
+        </div>
+
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box5"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box5"></div>
+
+        <section class="box6">
+            <h2>Titulo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tenetur impedit placeat assumenda aliquid, omnis voluptatem adipisci vero suscipit molestias nam voluptate aperiam porro ipsa maiores nesciunt consequuntur ex eaque.</p>
+
+            <article class="box7"></article>
+            <article class="box7"></article>
+            <article class="box7"></article>
+            <article class="box7"></article>
+        </section>
+
+        <section class="box8"> </section>
+
+    </div>  
 
 </body>
 </html>
