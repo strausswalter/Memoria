@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+        .box1{
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+
+            /* padding-left: 15px; 
+            padding-right: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;*/
+
+            padding: 15px 20px 30px 15px;
+
+            /* 
+            https://developer.mozilla.org/pt-BR/docs/Web/CSS/padding
+
+            A propriedade padding pode ser utilizada usando um, dois, três ou todos os quatro valores. Cada valor é um <comprimento> ou uma <porcentagem>.
+
+            Quando um único é valor utilizado, ele se aplica a todos os quatro lados.
+            Se Dois valores forem utilizados o primeiro se aplica às bordas verticais (superior e inferior) e o segundo se aplica às bordas horizontais (esquerda e direita).
+            Quando Três valores são utilizados o primeiro se aplica à borda superior, o segundo será utilizado tanto para a borda esquerda quanto para a borda direita. O terceiro será aplicado à borda inferior.
+            Com Quatro valores a ordem de aplicação é: superior, direita, inferior e esquerda (de acordo com o movimento dos ponteiros do relógio).
+            */
+
+            box-sizing: border-box;
+            /* O padding aumenta o tamanho dos elementos.
+             Opções: 
+             1-Compensar diminuindo o tamanho do width e/ou height
+             2-Usar o box-sizing*/
+
+            float: left;
+
+        }
+        .box2{
+            width: 300px;
+            height: 200px;
+            background-color: blue; 
+            
+            float: left;
+
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima dolore cumque esse! Voluptatum cum ratione tempore recusandae, magni quisquam aliquid cupiditate provident nisi eligendi quo incidunt autem, aut beatae.</div>
+
+    <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odit officia, eligendi facere explicabo hic iure. Praesentium at exercitationem sit doloribus numquam esse repellat, in alias fugiat quia fugit rerum.</div>
+
+
+</body>
+</html>
