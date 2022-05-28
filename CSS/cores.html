@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Cores</title>
+
+    <style>
+        h1{
+            color:green;
+            background-color: hsla(358, 90%, 43%,0.7);
+            /* ou hsl */
+        }
+        h2{
+            color: #cc55bb;
+            /* color: #c5b; */
+        }
+        P{
+            color: rgb(204, 21, 27);
+        }
+        body{
+            background-image: url('https://loremflickr.com/800/600/dog');
+            background-repeat: no-repeat;
+        }
+        .quadro{
+            /* width: 600px; */
+            height: 500px;
+            background-color: rgba(204,204,204,0.5)
+            /* opacity: 0.5;  RUIM, POIS TAMBÉM DEIXA AS LETRAS TRANSPARENTES. USAR NO LUGAR: rgba*/
+
+        }
+        .btn{
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 10px 10px 10px 10px;
+            margin-bottom: 20px;
+            
+            background-image: linear-gradient(to right, yellow, #123456);
+            /* "linear-gradiente" pode não funcionar em todos os navegadores */
+            /* Funcionalidades novas são lançadas junto com os kits abaixo (que garantem o funcionamento se a linha acima não funcionar) */
+            
+            background-image: -webkit-linear-gradient(to right, yellow, #123456);
+            /* Prefixo do Chrome e Safari */
+        
+            background-image: -moz-linear-gradient(to right, yellow, #123456);
+            /* Prefixo do Mozila Firefox */        
+        
+            background-image: -o-linear-gradient(to right, yellow, #123456);
+            /* Prefixo do Opera */
+
+            background-image: -ms-linear-gradient(to right, yellow, #123456);
+            /* Prefixo do IE */
+        }
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <div class="quadro">
+        <h1>Trabalhando com Cores</h1>
+        <h2>Tipos de cores no CSS</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam neque dolores laborum consequuntur eaque. Sint animi vero commodi, laborum facilis qui eum veritatis. Similique, laudantium tempora iste assumenda nisi aliquam!</p>
+        <p>Autem tenetur dolorem exercitationem officiis? Inventore vitae excepturi hic placeat, ratione quae nisi suscipit! Ut accusantium possimus dolore id, eos nam dolorem, hic, nobis sapiente obcaecati minus sint doloribus earum.</p>
+        <p>Suscipit nostrum iure quibusdam ipsum voluptatem minus adipisci quia natus nulla, similique veniam, sunt architecto velit nobis fugit reiciendis sint impedit ea ad facere! Repellat nihil harum doloremque necessitatibus ut.</p>
+        <p>Magnam cumque vel saepe excepturi commodi quod natus dignissimos sapiente ad officia. Aliquam fugit voluptatem eos illum tenetur possimus quod placeat qui sequi suscipit! Porro, quibusdam dolorum? Deleniti, quos voluptate?</p>
+        <p>Laborum eveniet asperiores eius, dolorum soluta consectetur. Voluptatibus non laudantium eveniet soluta laboriosam ducimus modi error culpa architecto, sapiente doloremque, placeat reprehenderit voluptate sequi aliquid iusto provident impedit dicta perspiciatis.</p>
+   
+        <button class="btn">Saiba mais+</button>
+   
+    </div>
+
+
+</body>
+</html>
