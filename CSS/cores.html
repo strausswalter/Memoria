@@ -22,7 +22,12 @@
         body{
             background-image: url('https://loremflickr.com/800/600/dog');
             background-repeat: no-repeat;
-        }
+            background-size: cover; /* cover: Uma palavra-chave que é o inverso de contain. Ajusta a imagem o mais largamente possível e mantém sua proporção (a imagem não fica esticada). A imagem "cobre" o container inteiro, tanto em altura como em largura. Quando a imagem e o container têm diferentes dimensões,a imagem ultrapassa os limites do container em qualquer direção, para continuar mantendo a proporção. */
+            background-attachment: fixed; 
+                /* fixed: a imagem não rola com o scrou (quando rola a pagina, a imagem continua fixa) */
+                /* local: a imagem irá mover junto com o elemento */
+                /* scroll: comportamento padrão. rola junto com a pagina */
+            }
         .quadro{
             /* width: 600px; */
             height: 500px;
