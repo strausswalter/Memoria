@@ -1,9 +1,9 @@
 .example {
     color: #FFF;
     text-align: justify;
-    padding: 0 25px;
+    /* padding: 0 25px; */
 }
-.example::after {
+ .example::after { 
     content: '';
     display: inline-block;
     width: 100%;
