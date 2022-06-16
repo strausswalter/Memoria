@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento document</title>
+</head>
+<body>
+    <form action="#" method="post" name="form1">
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="txtNome" id="nome" placeholder="Digite o seu nome">
+        <br>
+        <label for="email">Email</label>
+        <input type="text" name="txtEmail" id="email">
+        <br><br>
+        <input type="button" value="Enviar" onclick="
+            
+            let nome = document.querySelector('#nome').value;
+            let email = document.querySelector('#email');
+
+            alert('Olá ' + nome + ' <' + email.value + '>, seja bem vindo ao sistema!');
+        
+        ">
+
+    </form>
+
+    <script>
+    //Formas de buscar um elemento:
+        // document.form1.txtNome.value;
+        // document.getElementById('nome');
+        //document.querySelector('#nome').value;
+
+        //Colocar um conteudo de um campo de formulario em uma variavel
+        //let nome = document.querySelector('#nome').value;
+
+        //Coloca o conteudo da variavel no campo de formulario
+        //document.querySelector('#nome').value = 'Marcelo Torres'
+
+        // ________________________________
+
+        //let campo = document.querySelector('#nome');//Joga um seletor (ou id) de um elemento dentro de uma variavel
+        //campo.value; //Pode trabalhar com as propriedades (de um seletor) via variavel.
+
+        
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
