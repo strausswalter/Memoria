@@ -22,11 +22,12 @@
         console.log(texto.innerHTML);
 
         //Alterei todo o conteudo do id "conteudo".
-        //texto.innerHTML = '<h1 class="cor">Olá, mudei o seu HTML</h1><p>Texto</p>' 
+        //texto.innerHTML = '<h1 class="cor">Olá, mudei o seu HTML</h1><p>Texto</p>'; 
 
         //ou Adiciona conteudo
-        texto.innerHTML = texto.innerHTML + '<h1 class="cor">Olá, mudei o seu HTML</h1><p>Texto</p>' 
-
+        // texto.innerHTML = texto.innerHTML + '<h1 class="cor">Olá, mudei o seu HTML</h1><p>Texto</p>';
+        texto.innerHTML += '<h1 class="cor">Olá, mudei o seu HTML</h1><p>Texto</p>';
+        //   x += y   ==>   x = x + y
 
 
     </script>
