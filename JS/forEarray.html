@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        // nome do aluno - nota 1 - nota 2 - media - aprovado
+
+
+        let nomes=["Igor", "José", "Maria"];
+        let notasA=[7,6.5,9.5];
+        let notasB=[8,7,8.5];
+
+        function media(n1,n2){
+            return (n1+n2)/2;
+        }
+
+        function passou(media){
+            if(media > 7){
+                return "Aprovado";
+            } else{
+                return "Reprovado";
+            }
+        }
+
+
+        for(let index in nomes){
+            let nota1 = notasA[index];
+            let nota2 = notasB[index];
+            let m = media(nota1, nota2);
+
+            console.log(nomes[index] + " - " + nota1 + " - " + nota2 + " - " + m + " - " + passou(m));
+
+
+            //console.log(nomes[index] + " - " + notasA[index] + " - " + notasB[index] + " - " + media(notasA[index], notasB[index]));
+
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

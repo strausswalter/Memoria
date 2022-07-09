@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>
+        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#objetos_tudo
+        
+        //Forma tradicional de criar objetos:
+        var meuCarro = new Object();
+        
+        meuCarro.fabricacao = "Ford";
+        meuCarro.modelo = "Mustang";
+        meuCarro.ano = 1969;
+        
+        meuCarro["fabricacao"] = "Fiat";
+        meuCarro["modelo"] = "Palio";
+        meuCarro["ano"] = 2000;
+
+        var nomeDaPropriedade = "fabricacao";
+        meuCarro[nomeDaPropriedade] = "FIAT";   
+
+        function mostrarProps(obj, nomeDoObj) {
+        var resultado = "";
+        for (var i in obj) {
+            if (obj.hasOwnProperty(i)) {
+            resultado += nomeDoObj + "." + i + " = " + obj[i] + "\n";
+            }
+        }
+        return resultado;
+
+        }
+        console.log(mostrarProps(meuCarro, "Meu Carro -"));
+
+
+
+        //Forma "inicializador de objeto" para criar objetos:
+        let aluno = {
+            nome: "João",
+            notas: [7.5, 5.0]
+        }
+        
+
+        aluno.matricula = 12345;
+        aluno["sobrenome"] = "Oliveira";
+
+        console.log(aluno);
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
+
+
+
+

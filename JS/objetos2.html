@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos 2 - Usando Metodos (Funções como propriedades de objetos)</title>
+</head>
+<body>
+    <script>
+     
+     //Usando Metodos (Funções como propriedades de objetos)
+     function calcMedia(){
+        return(this.notas[0] + this.notas[1]) /2;
+     }
+
+     let aluno1={
+        nome: "Igor",
+        notas: [9,8],
+        media: calcMedia
+     }
+     let aluno2={
+        nome: "Paulo",
+        notas: [6,9],
+        media: calcMedia
+     }
+
+     console.log(aluno1.nome);
+     console.log(aluno1.media());
+
+     console.log(aluno2.nome);
+     console.log(aluno2.media());
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
+
+
+
+
