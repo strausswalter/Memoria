@@ -26,7 +26,8 @@
 
         function mostrarProps(obj, nomeDoObj) {
         var resultado = "";
-        for (var i in obj) {
+        for (var i in obj) { // testar se funciona assim: obj.forEach(mostrarProps(elemento))  console.log(elemento);
+     })
             if (obj.hasOwnProperty(i)) {
             resultado += nomeDoObj + "." + i + " = " + obj[i] + "\n";
             }
@@ -38,7 +39,7 @@
 
 
 
-        //Forma "inicializador de objeto" para criar objetos:
+        //Forma "com '{'" / "inicializador de objeto" / "instanciador de objeto" para criar objetos:
         let aluno = {
             nome: "João",
             notas: [7.5, 5.0]
