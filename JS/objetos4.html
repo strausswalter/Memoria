@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objetos 2 - Usando Metodos (Funções como propriedades de objetos)</title>
+    <title>Objetos 4 2a forma de Automatizar a criação dos objetos)</title>
 </head>
 <body>
     <script>
      
-     //Automatizar a criação dos objetos:
+     //2a forma de Automatizar a criação dos objetos / Construtor de objetos / Instanciar objetos (criar varias instancias do objeto):
 
-     function aluno(nome, n1, n2){
-            this.nome = nome,
+     function aluno(nome, n1, n2){ //Esta função não possui "retorn", portanto na hora de criar tem que usar "new aluno"
+            this.nome = nome, //Criando variaveis com o "this"
             this.nota1 = n1,
             this.nota2 = n2,
             this.media = function (){
@@ -27,21 +27,6 @@
     console.log(a);
     console.log(a.media());
 
-
-    //TESTE SW:
-    funcion criarCarro(fabricante, modelo, ano){
-        this.fabricante: fabricante,
-        this.modelo: modelo,
-        this.ano: ano
-    }
-
-    let carro1 = [
-        criarCarro("fiat",palio,1996),
-        criarCarro("ford",super,2004),
-        criarCarro("chevrolet",Celta,2000)
-     ]
-
-    console.log(carro1);
 
 
 

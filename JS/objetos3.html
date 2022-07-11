@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objetos 2 - Usando Metodos (Funções como propriedades de objetos)</title>
+    <title>Objetos 3 - 1a forma de Automatizar a criação dos objetos)</title>
 </head>
 <body>
     <script>
      
-     //Automatizar a criação dos objetos:
+     //1a forma de Automatizar a criação dos objetos:
 
      function criarAluno(nome, n1, n2){
         return{
@@ -23,7 +23,7 @@
      }
 
     
-
+     //Array turma com varias instencias do objeto Aluno:
      let turma = [
         criarAluno("Igor",9,6),
         criarAluno("João",7,4),
@@ -31,7 +31,8 @@
      ]
 
      //Um forma de mostrar esta lista:
-     turma.forEach(function (elemento){
+     turma.forEach(function (elemento){ //The forEach() method calls a function for each element in an array. It is not executed for empty elements.
+
         console.log(elemento);
      })
     

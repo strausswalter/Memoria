@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // function onOver(){
+        //     let elemento = document.querySelector('#idBotao').innerHTML;
+        //     elemento.style.backgroundColor="red";
+        // }
+        
+
+        function fOver(){
+            console.log('Texto: ' + document.querySelector('#idBotao').innerHTML);
+        }
+
+        window.addEventListener('load', fOver);
+        
+        // window.addEventListener('load', function(){
+        //     console.log('Página carregada!');
+        //     console.log(document.querySelector('#idBotao').innerHTML);
+        //     document.querySelector('#idBotao').addEventListener('click', function(){
+        //         function onOver()
+        //     });
+        // });
+
+
+        
+        // function onOut(i){
+        //     i.style.backgroundColor="cornflowerblue";
+        // }
+    </script>
+    <style>
+        div{
+            display: inline-block;
+            padding: 20px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="idBotao">Click!!</div> 
+
+    
+
+
+</body>
+</html>

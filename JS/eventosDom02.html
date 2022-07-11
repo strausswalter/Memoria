@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h4{
+            color: red;
+        }
+    </style>
+
+    <script>
+       // Using window.onload event twice
+        window.onload = function () {
+        console.log("onload 1");
+        };
+ 
+        window.onload = function () {
+        console.log("onload 2");
+        };
+ 
+        // Using window.addEventListener event twice
+        window.addEventListener("load", function () {
+        console.log("addEventListener 1");
+        });
+ 
+window.addEventListener("load", function () {
+    console.log("addEventListener 2");
+    });
+    </script>
+</head>
+<body>
+  
+    <h1>window.onload vs window.addEventListener</h1>
+    <h2>https://adnan-tech.com/difference-between-window-onload-and-window-addeventlistener/</h2>
+    <h3>We highly recommend that you should make your habit of using the window.addEventListener as it is more reliable.</h3>
+    <h4>O script acima mostra que onload é um atributo que pode ser sobrescrito. addEventListener é uma função que pode rodar várias vezes.</h4>
+</body>
+</html>

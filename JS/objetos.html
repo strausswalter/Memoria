@@ -24,10 +24,11 @@
         var nomeDaPropriedade = "fabricacao";
         meuCarro[nomeDaPropriedade] = "FIAT";   
 
+        //Mostrar propriedades do objeto "MeuCarro"
         function mostrarProps(obj, nomeDoObj) {
         var resultado = "";
         for (var i in obj) { // testar se funciona assim: obj.forEach(mostrarProps(elemento))  console.log(elemento);
-     })
+     
             if (obj.hasOwnProperty(i)) {
             resultado += nomeDoObj + "." + i + " = " + obj[i] + "\n";
             }
