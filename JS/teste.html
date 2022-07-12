@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function fClick(){
-            document.querySelector('#demo').innerHTML = "Paragrafo alterado!!!";
-        }
-    </script>
 </head>
 <body>
-  
-    <h2>Demo javascript in head</h2>
+    
+    <form action="#" method="post" name="form1">
+        <label for="idNome">Nome:</label>
+        <input type="text" name="txtNome" id="idNome">
+        <br>
+        <label for="idEmail">Email:</label>
+        <input type="text" name="txtEmail" id="idEmail">
+        <br><br>
+        <input type="button" value="Enviar" onclick="
+        
+          let nome = document.querySelector('#idNome').value;
+          //alert(nome);
+           console.log(document.form1.txtEmail.value);
+           console.log(document.querySelector('#idEmail').value + 'texto tal');
+        ">
 
-    <p id="demo">um paragrafo!</p>
-    <button onclick="fClick()">Tente isso!!</button>
+    </form>
 
+
+
+
+    <script>
+        //comentario em linha
+        /* 
+          comentario em bloco
+        */
+       
+        
+</script>
+<noscript>
+    O seu browser nao aceita JavaScript!
+</noscript>
 
 </body>
 </html>
