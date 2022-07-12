@@ -26,10 +26,28 @@ for(let i in alunos){  //Retorna o index do array alunos
 console.log('');
 
 console.log('Feito com "Retorna o conteudo do array alunos":');
-for(let aluno of alunos){  //Retorna o conteudo do array alunos
+for(let aluno of alunos){  //Retorna o conteudo do array alunos. NÃO FUNCIONA COM OBJETOS, A NÃO SER QUE USE BUILT-IN OBJETOS COMO Map E Set.(*)
     console.log(aluno);
 
 }
+// ------------------------------------------
+
+//(*) Exemplo de como usar for...in com Objetos:
+letpets = new Set(["Cat", "Dog", "Hamster"]);
+pets["species"] = "mammals";
+for(let pet in pets) {
+   console.log(pet); // "species"
+}
+for(letpet ofpets) {
+    console.log(pet); // "Cat", "Dog", "Hamster"
+}
+
+
+
+
+
+
+
 
 
 </script>
