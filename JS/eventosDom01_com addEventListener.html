@@ -1,3 +1,4 @@
+<!-- Adicionar um evento listener após loag da página - Exemplo de script dentro de head (ou arquivo separado) -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,47 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  
+
     <script>
+        window.addEventListener("load", function(){ //Pode usar window.onload = function (){}  -- but using window.addEventListener you can add as many functions as you want and they will all be called in parallel.
 
-        // function onOver(){
-        //     let elemento = document.querySelector('#idBotao').innerHTML;
-        //     elemento.style.backgroundColor="red";
-        // }
-        
+            document.querySelector("#boxClick").onmouseover = function() {mouseOver()};
+        document.querySelector('#boxClick').addEventListener("mouseout", mouseOut);
 
-        function fOver(){
-            console.log('Texto: ' + document.querySelector('#idBotao').innerHTML);
+        function mouseOver(){
+            console.log('onOver!!!');
+            document.querySelector('#boxClick').style.backgroundColor = "red";
+        }
+        function mouseOut(){
+            console.log('onOut!');
+            document.querySelector('#boxClick').style.backgroundColor = "cornflowerblue";
         }
 
-        window.addEventListener('load', fOver);
-        
-        // window.addEventListener('load', function(){
-        //     console.log('Página carregada!');
-        //     console.log(document.querySelector('#idBotao').innerHTML);
-        //     document.querySelector('#idBotao').addEventListener('click', function(){
-        //         function onOver()
-        //     });
-        // });
+        });
 
-
-        
-        // function onOut(i){
-        //     i.style.backgroundColor="cornflowerblue";
-        // }
     </script>
+
+
     <style>
-        div{
-            display: inline-block;
-            padding: 20px;
-            font-size: 2rem;
-            background-color: cornflowerblue;
-            color: aliceblue;
-        }
+       div{
+        display: inline-block;
+        padding: 20px;
+        font-size: 2rem;
+        background-color: cornflowerblue;
+        color: aliceblue;
+       }
     </style>
 </head>
 <body>
     
-    <div id="idBotao">Click!!</div> 
+    <div id="boxClick">Click</div>
 
     
 

@@ -1,3 +1,4 @@
+<!-- Adicionar um evento listener após loag da página - Exemplo "inline" -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <!-- CORRIGIR CODIGO !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+   
    <script>
         function onOver(i){
             i.style.backgroundColor="red";
@@ -24,7 +25,7 @@
         }
     </style>
 </head>
-<body onload = "console.log('Página carregada!')">
+<body onload = "console.log('Página carregada!')"> <!--"onload" é um comando Javascript 'online' (não recomendado para código grande (que separa scripts em arquivos externos)).  -->
     
     <div onmouseover="onOver(this)" 
             onmouseout="onOut(this)">Click</div>
