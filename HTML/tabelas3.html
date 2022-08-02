@@ -1,0 +1,139 @@
+<!-- Criar um documento HTML com a aparência semelhante ao anexo exe-fixacao-3.png. Agora é necessário colocar cor. Fique a vontade para usar CSS inline dentro das tags e um arquivo externo de css. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    
+    /*  */
+    th,
+    td {
+      text-align: center;
+      padding: 8px;
+    }
+    th{
+        color: blue;
+        font-size: 1.2em;
+        font-style: italic;
+
+    }
+    .rosa {
+      background-color: #ffe6ff;
+    }
+
+    .amarelo {
+      background-color: #ffffb3;
+    }
+
+    .vermelho {
+      background-color: #ff3300;
+      color: black;
+    }
+
+    tbody{
+        background-color: #ffffb3;
+    }
+
+    tbody td:nth-child(1){
+      background-color: pink;
+      font-weight: 600;
+      color: black;
+
+
+    }
+    tbody td:last-child{
+      background-color: #ff3300;
+      font-weight: 600;
+
+    }
+    tbody td {
+        color: green;
+    }
+    tfoot{
+        color: blue;
+        font-style: italic;
+        font-weight: 600;
+
+    }
+
+    
+
+    /* tr:nth-child(even){background-color: #f2f2f2}
+        th {
+            background-color: #4CAF50;
+            color: white;
+        } */
+  </style>
+
+</head>
+
+<body>
+  <h1>Disciplina de Análise Matemática</h1>
+  <h2>Notas de 1999/2000</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Aluno</th>
+        <th>Frequência</th>
+        <th>1<sup>a</sup> Chamada</th>
+        <th>2<sup>a</sup> Chamada</th>
+        <th>Final</th>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>Ana Maria</td>
+        <td>12.5</td>
+        <td>14.2</td>
+        <td></td>
+        <td>14</td>
+
+      </tr>
+      <tr>
+        <td>João</td>
+        <td>11.5</td>
+        <td>12.5</td>
+        <td></td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <td>Rui Manuel</td>
+        <td>12.5</td>
+        <td>13.2</td>
+        <td></td>
+        <td>13</td>
+      </tr>
+
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="4">Média</td>
+    
+            <td>13.3</td>
+    
+          </tr>
+
+    </tfoot>
+
+    
+
+  </table>
+
+
+
+
+
+
+
+</body>
+
+</html>
