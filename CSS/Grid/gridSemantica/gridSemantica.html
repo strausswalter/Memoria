@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+html,
+body,
+.grid-container {
+  height: 100%;
+  margin: 0;
+}
+
+.grid-container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 40em 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    " . header ."
+    " . content ."
+    " . footer . ";
+}
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+}
+header, content, footer {
+}
+</style>
+
+<body>
+    
+<div class="grid-container">
+  <header>header</header>
+  <main>content</main>
+  <footer>footer</footer>
+</div>
+
+
+
+
+    
+</body>
+</html>
