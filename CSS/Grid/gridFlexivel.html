@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+            gap: 1rem;
+            /*auto-fill: PREENCHE a linha com quantas colunas caber, sem esticar os elementos, permitirá que colunas vazias ocupem espaço na linha */
+                /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));   */
+            
+            /* auto-fit: AJUSTA as colunas. o conteúdo será esticado para preencher toda a largura da tela. */
+                /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));  */
+            
+            /* Se esse número for alto (como 400px), considerar alteração que permita que ele fique menor se a tela for menor que esta largura.*/
+            /* se 100% de largura for calculado para menos de 10rem (caso contrário, o mínimo), use isso, tornando-o mais seguro para layouts de tela pequena. */
+                grid-template-columns: repeat(auto-fill, minmax(min(10rem, 100%), 1fr));
+        }
+
+        /* .grid-element {
+            background-color: deepPink;
+            padding: 20px;
+            color: #fff;
+            border: 1px solid #fff;
+        } */
+
+
+        .grid-container > div {
+            height: 100px;
+            background: red;
+        }
+
+        body {
+            padding: 2em;
+        }
+
+        /* 
+        .grid {
+            display: grid;
+            gap: 1rem;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+        }
+
+       
+        }
+
+        body {
+            margin: 1rem;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+<div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+
+
+
+</body>
+
+</html>
