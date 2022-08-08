@@ -11,14 +11,21 @@
 
         <form action="envia.php" method="post" enctype="multipart/form-data">
             <label for="idnome">Nome:</label>
-            <input type="text" name="txtNome" id="idnome" required="required" placeholder="Digite o seu nome" autofocus>
+            <input type="text" name="txtNome" id="idnome" required="required" placeholder="Digite o seu nome" autofocus maxlength="8">
 
             <br><br>
 
             <label for="idemail">Email:</label>
             <input type="email" name="txtEmail" id="idemail" required="required" placeholder="exemplo@gmail.com" autocomplete="off">
+            
+            <!-- no ludar de required: disabled (não envia para o backend), readonly (envia). -->
+            <!-- <input type="text" value="10" readonly> -->
+            <!-- <input type="text" value="Cidade" disabled> -->
+            
+            <!-- Hidden para ocultar o input ao usuario-->
+            <!-- <input type="hidden" value="10" readonly> -->
+            
 
-        
 
             <br><br>
 
@@ -26,7 +33,9 @@
             <input type="password" name="txtSenha" id="idsenha" maxlength="8" minlength="6" autocomplete="off">
 
             <br><br>
-
+            <label for="idtelefone">Telefone:</label>
+            <input type="tel" name="txtTelefone" id="idtelefone" placeholder="(00) 00000-0000" autocomplete="off">
+            <br><br>
 
             <label for="">Estado Civil:</label>
 
