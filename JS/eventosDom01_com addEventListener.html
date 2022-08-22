@@ -9,8 +9,9 @@
   
 
     <script>
-        window.addEventListener("load", function(){ //Pode usar window.onload = function (){}  -- but using window.addEventListener you can add as many functions as you want and they will all be called in parallel.
-
+        window.addEventListener("DOMContentLoaded", function(){ 
+            //Pode usar window.onload = function (){}  -- but using window.addEventListener you can add as many functions as you want and they will all be called in parallel.
+            //A different event, load, should be used only to detect a fully-loaded page. It is a common mistake to use load where DOMContentLoaded would be more appropriate.
             document.querySelector("#boxClick").onmouseover = function() {mouseOver()};
         document.querySelector('#boxClick').addEventListener("mouseout", mouseOut);
 

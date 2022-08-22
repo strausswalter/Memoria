@@ -1,0 +1,21 @@
+
+/* Para sobrescrever a fonte do Bootstrap caso queira */
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap'); */
+/* *{font-family: 'Nunito Sans', sans-serif;} */
+
+/* _______________________________________________________ */
+
+/* Importar outros arquivos CSS para organização */
+@import url('header.css');
+@import url('footer.css');
+@import url('medias.css');
+
+/* _______________________________________________________ */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+

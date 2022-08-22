@@ -1,0 +1,46 @@
+<!-- Adicionar um evento listener após loag da página - Exemplo de script dentro de head (ou arquivo separado) -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+
+
+
+    <style>
+       div{
+        display: inline-block;
+        padding: 20px;
+        font-size: 2rem;
+        background-color: cornflowerblue;
+        color: aliceblue;
+       }
+    </style>
+</head>
+<body>
+    
+    <div id="boxClick">Click</div>
+
+    
+
+
+    <script>
+
+        document.querySelector("#boxClick").onmouseover = function() {mouseOver()};
+    document.querySelector('#boxClick').addEventListener("mouseout", mouseOut);
+
+    function mouseOver(){
+        console.log('onOver!!!');
+        document.querySelector('#boxClick').style.backgroundColor = "red";
+    }
+    function mouseOut(){
+        console.log('onOut!');
+        document.querySelector('#boxClick').style.backgroundColor = "cornflowerblue";
+    };
+
+</script>
+</body>
+</html>
