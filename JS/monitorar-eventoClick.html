@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            color: blue;
+            border: 2px solid;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum magni fugit ex provident ducimus nisi illum dignissimos consequatur dolores laborum nesciunt recusandae, nobis facere assumenda libero consectetur velit eveniet voluptatum quidem! Repellat numquam, facere corporis eos, animi quasi blanditiis sunt labore iure error tenetur? Facere non quos alias voluptatibus.
+
+    </p>
+    
+
+
+
+<script>
+    // Forma preferivel
+    const _titulo = document.querySelector('h1');
+    _titulo.addEventListener('click', atualizarNome);
+
+    function atualizarNome(){
+        let _nome = prompt("Digite seu nome: ");
+        _titulo.textContent = "Meu nome é: " + _nome;
+    }
+
+
+
+    // 2a forma
+    const P = document.querySelector('p');
+    P.addEventListener('click', () => {
+        const NOME = prompt("Digite seu nome: ");
+        P.innerText = "Meu nome é: " + NOME;
+
+    })
+</script>
+
+
+</body>
+</html>
