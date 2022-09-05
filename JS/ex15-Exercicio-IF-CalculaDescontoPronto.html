@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Exercício Calcula Desconto - Javascript</title>
+<style>
+	fieldset {width: 300px;}
+</style>
+
+</head>
+
+
+<body>
+	<h2>Exercício Operadores</h2>
+
+	<h3>Construa um formulário HTML que possua um campo para o usuário digitar o valor do salário e um botão submit que ao ser clicado calcule e imprima o valor do desconto de acordo com a tabela abaixo. 
+</h3>
+
+	<table border="1">
+		<tr><th>Salário</th><th>Desconto</th></tr>
+		<tr><td>Até R$ 1000</td><td>10%</td></tr>
+		<tr><td>De R$ 1001 até 2000</td><td>15%</td></tr>
+		<tr><td>De R$ 2001 até 3000</td><td>20%</td></tr>
+		<tr><td>Acima R$ 3001</td><td>25%</td></tr>
+	</table>
+	<hr/>
+	
+<form action="" method="post">
+	<fieldset><legend>Dados para Envio:</legend>
+	<label for="salario">Digite o Salário:</label><br/>
+    <input type="text" name="txtSal" id="salario"/>
+
+    <input type="button" value="Enviar" id="btnCalcula"/>
+
+    <div id="divResultado"></div>
+
+    </fieldset>
+</form>
+
+	<script>
+		window.addEventListener('load', function(){
+			let btn = document.querySelector('#btnCalcula');
+			btn.addEventListener('click', function(){
+				CalculaDesconto();
+			});
+		});
+
+		function CalculaDesconto() {
+			//crio a variavel desconto
+			let desconto;
+			
+			//pego o valor do salario
+			let salario = parseFloat(document.querySelector('#salario').value);
+
+			//testo se o valor do salario é menor que 0 ou se não é um número
+			if( (salario < 0) || (isNaN(salario)) ) {
+				alert('Salário Inválido!');
+				return false;
+			}
+
+			if (salario <= 1000) {
+				desconto = salario * 0.10;
+			} else if (salario <= 2000) {
+				desconto = salario * 0.15;
+			} else if (salario <= 3000) {
+				desconto = salario * 0.20;
+			} else {
+				desconto = salario * 0.25;
+			}
+			let msg = 'O valor do salário é de R$ ' + salario + ', o valor do desconto calculado foi R$ ' + desconto + ', o valor líquido é de R$ ' + (salario - desconto);
+			
+			alert(msg);
+			document.querySelector('#divResultado').innerHTML = msg;
+
+		}//fim CalculaDesconto()
+
+
+
+	</script>
+
+</body>
+</html>

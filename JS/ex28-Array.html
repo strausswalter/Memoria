@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo de Array - Javascript</title>
+
+</head>
+<body>
+	<h1>Exemplo de Array - Javascript</h1>
+	
+	<h4>Dados do array:</h4>
+
+	<div id="resultado"></div>
+
+	<script>
+		
+		alunos = new Array(10);
+		//alunos = new Array();
+
+		alunos[0] = "Luana";
+		alunos[1] = "Pablo";
+		alunos[2] = "João";
+		alunos[3] = "Maria";
+		alunos[4] = "Paulo";
+
+		objBox = document.getElementById("resultado");
+		objBox.innerHTML = "<p>Esse é o 4º Elemento do Array: " + alunos[3] + "</p>";
+
+	</script>
+
+</body>
+</html>
+
+
