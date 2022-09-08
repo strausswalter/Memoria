@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const dados = [ 
+        //     {
+        //         nome: "Tiago",
+        //         sobreNome: "Silva",
+        //         nascimento: new Date(1995, 6, 27),
+        //         casado: true,
+        //         filhos: false,
+        //         profissão: "Head de TI",
+        //         formacao: "Engenharia de Software"
+        //     }, 
+        //     {
+        //         nome: "João",
+        //         sobreNome: "Marcelo",
+        //         nascimento: new Date(1990, 2, 10),
+        //         casado: false,
+        //         filhos: true,
+        //         profissão: "CTO",
+        //         formacao: "Engenharia de Software"
+        //     } 
+        // ]
+        // console.log(dados[0]['nome'])
+        // console.log(dados[1]['nome'])
+
+        // for(let dado of dados){
+        //     console.log(dado['nome'])
+        //     console.log(dado['sobreNome'])
+        //     console.log(dado['nascimento'])
+        //     console.log("=========")
+        // }
+
+        // JSON
+        // JavaScript Object Notation
+        const catalogos = {
+            tarzan: {
+                nome: "Tarzan o rei da floresta",
+                dataLancamento: new Date(1995, 6, 27).toJSON(),
+                img: "https://gadarf.com/downloads/tarzan-o-rei-da-selva-disney.jpg"
+            }, 
+            mulan: {
+                nome: "Mulan o filme",
+                dataLancamento: new Date(1990, 2, 10).toJSON(),
+                img: "https://p2.trrsf.com/image/fget/cf/1200/1200/filters:quality(85)/images.terra.com/2020/09/03/mulan-2postergoldpostercom20.jpg"
+            } 
+        }
+
+
+        // console.log(dados["tarzan"]["nome"])
+        // console.log(dados["tarzan"]["img"])
+        // console.log(dados["mulan"]["nome"])
+        // console.log(dados["mulan"]["img"])
+        
+        // const dados = [];
+
+        // while(true){
+
+        // }
+
+        // let nome = prompt("Digite um nome: ");
+        // let idade = prompt("Digite uma idade: ")
+        // let dado = {
+        //     nome,
+        //     idade,
+        //     dataDoRegistro: new Date()
+        // }
+            
+        // let jsonObj = JSON.parse('{"nome": "Tiago", "idade": 27 }');
+        // console.log(jsonObj['nome']);
+        // let catalogosText = JSON.stringify(catalogos);
+        // console.log(catalogosText);
+        // console.log(catalogos);
+        
+        // // Salvando uma data no formato correto para JSON.
+        // console.log(new Date().toJSON())
+        // // Revertendo uma data do formato correto para JSON em UTC.
+        // console.log(new Date("1995-07-27T03:00:00.000Z").toUTCString())
+        
+        // Desestruturação de array 
+        // let dado = ["Tiago", 27];
+        // let [a, b] = dado;
+        // console.log(a)
+        // console.log(b)
+        
+        // Desestruturação de json
+        // let dadoJson = { nome: 'Tiago', idade: 27}
+        // let dadoJson2 = { data: new Date().toJSON() }
+    
+        // let { nome, idade } = dadoJson;
+        // console.log(nome);
+        // console.log(idade);
+        
+        // Atualizando um json com outro jsons
+        // dadoJson = {
+        //     sobreNome: "Silva",
+        //     ...dadoJson,
+        //     ...dadoJson2
+        // }
+        
+        // Pegando todas as chaves de um JSON
+        // for(let chave of Object.keys(dadoJson)){
+        //     console.log(dadoJson[chave])
+        // }
+
+        // Object.keys(dadoJson).map(function(chave){
+        //     console.log(dadoJson[chave])
+        // })
+        for(let catalogo of Object.keys(catalogos)){
+            console.log(catalogos[catalogo]['nome'])
+            console.log(catalogos[catalogo]['dataLancamento'])
+            console.log(catalogos[catalogo]['img'])
+            console.log("=====================================")
+        }
+    </script>
+</body>
+</html>

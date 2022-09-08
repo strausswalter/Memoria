@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .img-carousel{
+            background-size: cover;
+            height: 600px;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="carouselCatalogos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="carouselCatalogoItems"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCatalogos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCatalogos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalCatalogos" tabindex="-1" aria-labelledby="modalCatalogosLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCatalogosLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalCatalogosImg" width="300">
+                    <br>
+                    <small id="modalCatalogosDataLancamento"></small>
+                    <p id="modalCatalogosDescricao"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/variables.js"></script>
+    <script src="./js/catalogos.js"></script>
+</body>
+</html>
