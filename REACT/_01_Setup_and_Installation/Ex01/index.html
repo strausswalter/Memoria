@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Manual</title>
+</head>
+
+<body>
+    <!-- Forma básica de funcionamento do React -->
+    <div id="root"></div>
+
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const root = document.querySelector("#root");
+
+        const t1 = React.createElement("h1", { id: "Título principal" }, "Hello World");
+        const t2 = React.createElement("h4", { id: "Título complementar" }, "Subtitulo");
+
+        const headline = React.createElement("div", { id: "headline" }, t1, t2);
+
+        ReactDOM.render(headline, root);
+    </script>
+
+</body>
+
+</html>
