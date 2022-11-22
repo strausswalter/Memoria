@@ -9,7 +9,9 @@ productCtrl = new ProductController();//Apagar caso use a opção de importaçã
 
 //	GET - Recupera dados do servidor
 router.get("/", async (req, res) => {
-    let result = productCtrl.getProducts();//Apagar "productCtrl." caso use a opção de importação no padrão de codificação funcional
+    //Apagar "productCtrl." caso use a opção de importação no padrão de codificação funcional
+    //req.query: passar parametros da busca GET (como page e limit)
+    let result = productCtrl.getProducts(req.query);
     res.send(result);
 });
 

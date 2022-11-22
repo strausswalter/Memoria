@@ -23,6 +23,7 @@ router.get("/", async (req, res) => {
 //     res.send(userCtrl.getUser(req.params.id));
 // })
 
+//Lista um usuário
 router.get("/:id", async (req, res) => {
     res.send(userCtrl.getUser(req.params.id));
 })
