@@ -88,7 +88,8 @@ class ProductController {
     
     //TODO: Mudar para banco de dados:
     //Simulação abaixo por não ter ainda um banco de dados:
-    let total = Object.keys(PRODUCTS).length;//Parte da transformação de json para array. Retorna array com keys do jason
+    let keys = Object.keys(PRODUCTS);//Parte da transformação de json para array. Retorna array com keys do jason
+    let total = keys.length;
     let results = [];
     let max = total / params.limit;
 

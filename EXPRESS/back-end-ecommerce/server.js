@@ -1,15 +1,15 @@
 const express = require('express');
-const path = require('path');
+// const path = require('path');
 const app = express();
-const port = 3000;
+const port = 3001;
 
-//Rotas:
+//Rotas - carregar modulos de rotas:
 const user = require('./routes/user');
 const auth = require('./routes/auth');
 const product = require('./routes/product');
 const category = require('./routes/category');
 
-
+//Rotas - montar a função middleware no caminho especificado:
 app.use('/user', user);
 app.use('/auth', auth);
 app.use('/product', product);
