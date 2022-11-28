@@ -19,7 +19,7 @@ app.get('/', (req, res)=>{  //app.METHOD(PATH, HANDLER)
     res.send('Ola mundo!!!!!!!!!!');
 })
 
-app.use('/user-api', userRoutes);
+app.use('/user-api', userRoutes);//Rota para os EndPoints de usuarios (os EndPoints estão no routes/user.routes.js)
 app.use('/product-api', productRoutes);
 
 

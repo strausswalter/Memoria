@@ -7,7 +7,7 @@ router.get('/user', listUsers);
 router.get('/user/:id', listUserbyId);
 router.post('/user', createUser);
 router.delete('/user/:id', deleteUser);
-router.put('.user/:id', editUser);
+router.put('/user/:id', editUser); //EndPoint para a função editUser, que está em /controller/users.
 
 
 module.exports = router;

@@ -2,6 +2,7 @@ const express = require('express');
 // const path = require('path');
 const app = express();
 const port = 3001;
+const db = require('./db.js');
 
 //Rotas - carregar modulos de rotas:
 const user = require('./routes/user');
@@ -15,11 +16,9 @@ app.use('/auth', auth);
 app.use('/product', product);
 app.use('/category', category);
 
-
-
-
+db.sync();
 app.listen(port, function(){
     console.log("Aplicativo Rodando!!");
 });
 
-//Testar no terminal com: node index.js
+//Rodar no terminal com: node run watch

@@ -1,6 +1,6 @@
 const database = require("../database/models");
 
-//Listar usuarios
+//Listar produtos
 const listProducts = async (req, res) => { //Toda consulta a banco é asyncrona no JavaScript (na grande maioria dos casos).
   const allProducts = await database.Products.findAll();
   
@@ -71,4 +71,4 @@ const editProduct = async (req, res) => {
   return res.send("Usuário não editado");
 };
 
-module.exports = { listProducts, listProductbyId, createProduct, deleteProduct, editProduct };
+module.exports = { listProducts };

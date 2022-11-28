@@ -1,3 +1,6 @@
+const User = require("../models/User");
+
+
 class UserController{
     getUser(id){
         return{
