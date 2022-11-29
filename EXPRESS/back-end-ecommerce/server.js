@@ -1,7 +1,8 @@
 const express = require('express');
 // const path = require('path');
+require("dotenv").config();//Para usar variaveis de ambiente do arquivo .env
 const app = express();
-const port = 3001;
+// const port = 3001;  Usando variaveis de ambiente no lugar (arquivo .env)
 const db = require('./db.js');
 
 //Rotas - carregar modulos de rotas:
@@ -17,7 +18,7 @@ app.use('/product', product);
 app.use('/category', category);
 
 db.sync();
-app.listen(port, function(){
+app.listen(process.env.PORT, function(){
     console.log("Aplicativo Rodando!!");
 });
 

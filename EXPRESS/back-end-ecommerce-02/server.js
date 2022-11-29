@@ -10,7 +10,6 @@ const app = express();  //Creates an Express application. instance of express na
 const PORT = process.env.PORT || 3001;  //process.env a global variable that is injected during runtime. It is a view of the state of the system environment variables. Usar em conjunto com o pacote dotEnv que carrega automaticamente as variáveis de ambiente de um arquivo .env no objeto process.env.
 
 
-
 app.use(express.json()); //Aceita requests via JSON Object. It parses incoming JSON requests and puts the parsed data in req.body.
 app.use(cors());
 

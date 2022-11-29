@@ -1,38 +1,74 @@
 const Product = require("../models/Product");
 const { Sequelize } = require("sequelize");
+const GenericController = require('./GenericController');
 const Op = Sequelize.Op;
 
-class ProductController {
+
+class ProductController extends GenericController{
+  constructor(){ //invoke a superclass's constructor.
+    super();
+  }
+
   async getProducts(params) {
     //Também pode usar desestruturação: getProducts({ page, limit })
     let result;
-    const limit = parseInt(params.limit),
-      page = parseInt(params.page) -1;
 
+    const pagination = this.generatePagination(params),
+    limit = pagination[0],
+    page = pagination[1];
+
+    //Page limit: criando os parametros do limit.
     const paramsLimit = {
       offset: page * limit,
-      limit: parseInt(limit), //Para buscas com '?limit'. Exemplo: localhost:3001/product?limit=2?q=vesti
+      limit: parseInt(limit), 
     };
-    //TODO: Corrigir erro de send / request:  localhost:3001/product/
-    if (params.q) {
+
+  
+    if(params.q){//Verifica se existe parametro 'q' no request
       result = await Product.findAll({
         where: {
           name: {
-            [Op.like]: `%${params.q}%`, //Para buscas com '?q'. Exemplo: localhost:3001/product?q=vEstido
+            [Op.like]: `%${params.q}%`, 
+            //Para buscas com '?q'. Exemplo: localhost:3001/product?q=vEstido
             //Tiago Silva recomendou usar `%${params.q.toLowerCase()}%`,  mas não gostei do resultado na busca.
           },
         },
         ...paramsLimit,
       });
-    } else {
+    }else{
       result = await Product.findAll(paramsLimit);
     }
     return result;
   }
+
   async getProduct(id) {
     const result = await Product.findByPk(id);
     return result;
-  }
+}
+
+async createProduct(data) {
+  return `Criado novo produto`;
+}
+
+async updateProduct(id, data){
+  return `Atualizando o produto ${id}`;
+
+}
+
+async deleteProduct(id){
+  return `Deletando o produto ${id}`;
+}
+
+
+
+
+
+
+
+
+
+
+
 
   //Buscar produto por id de lista json manual (sem banco de dados):
   // getProduct(id) {
@@ -45,12 +81,13 @@ class ProductController {
   //   }
   // }
 
-  filterProductByName(name) {
-    let arrayProducts = [];
-    let keys = Object.keys(PRODUCTS);
-    for (const productId of keys) {
-    }
-  }
+    //TODO: Corrigir, não está funcionando.
+  // filterProductByName(name) {
+  //   let arrayProducts = [];
+  //   let keys = Object.keys(PRODUCTS);
+  //   for (const productId of keys) {
+  //   }
+  // }
 }
 
 module.exports = ProductController;
